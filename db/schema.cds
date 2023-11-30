@@ -15,6 +15,15 @@ using
 }
 from '@sap/cds/common';
 
+entity Mitigations : managed
+{
+    key ID : UUID;
+    description : String(100);
+    owner : String(100);
+    timeline : String(100);
+    risks : Association to many Risks on risks.miti = $self;
+}
+
 entity Risks : managed
 {
     key ID : UUID;
@@ -25,13 +34,4 @@ entity Risks : managed
     criticality : Integer;
     miti : Association to one Mitigations;
     supplier : Association to one BusinessPartnerA2X.A_BusinessPartner;
-}
-
-entity Mitigations : managed
-{
-    key ID : UUID;
-    description : String(100);
-    owner : String(100);
-    timeline : String(100);
-    risks : Association to many Risks on risks.miti = $self;
 }

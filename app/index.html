@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"RiskManagementService","DetailsURL":"./service/RiskManagement/","Metadata":"./service/RiskManagement/$metadata","Entities":[{"Name":"Risks","URL":"./service/RiskManagement/Risks","FioriURL":"$fiori-preview/RiskManagementService/Risks#preview-app"},{"Name":"Mitigations","URL":"./service/RiskManagement/Mitigations","FioriURL":"$fiori-preview/RiskManagementService/Mitigations#preview-app"},{"Name":"A_BusinessPartner","URL":"./service/RiskManagement/A_BusinessPartner","FioriURL":"$fiori-preview/RiskManagementService/A_BusinessPartner#preview-app"}],"EntitiesCount":3}]}
+                            const data = {"Services":[{"ServiceName":"RiskManagementService","DetailsURL":"./service/RiskManagement/","Metadata":"./service/RiskManagement/$metadata","Entities":[{"Name":"Mitigations","URL":"./service/RiskManagement/Mitigations","FioriURL":"$fiori-preview/RiskManagementService/Mitigations#preview-app"},{"Name":"A_BusinessPartner","URL":"./service/RiskManagement/A_BusinessPartner","FioriURL":"$fiori-preview/RiskManagementService/A_BusinessPartner#preview-app"},{"Name":"Risks","URL":"./service/RiskManagement/Risks","FioriURL":"$fiori-preview/RiskManagementService/Risks#preview-app"}],"EntitiesCount":3}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });
